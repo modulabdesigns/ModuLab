@@ -1,6 +1,6 @@
 <div align="center">
 
-![GenerativeBooth_Logo](img/GenerativeBoothLogoBorder_White.png)
+![GenerativeBooth_Logo](img/ModuLab_LogoBorder.png)
 
 </div>
 
