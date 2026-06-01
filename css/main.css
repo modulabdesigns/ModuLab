@@ -76,7 +76,7 @@ p {
 }
 
 .leftNav a img {
-    width: 5vw;
+    width: 12vw;
     align-items: center;
 }
 
@@ -159,6 +159,7 @@ p {
     margin-top: 7vh;
     border-radius: 0.3vw;
     transition: 0.7s;
+    text-decoration: none;
 }
 
 .headerContent a:hover {
@@ -189,6 +190,7 @@ p {
 
 .clickDown {
     background-color: #EA7600;
+    color: #E5E5E5;
     width: 12vh;
     height: 12vh;
     display: flex;
@@ -197,6 +199,7 @@ p {
     align-items: center;
     transition: 0.7s;
     padding: 0 1.5vw;
+    font-size: 1.5vw;
 }
 
 .clickDown:hover {
@@ -267,14 +270,20 @@ p {
     color: #E5E5E5;
     font-size: 3vw;
     padding: 0;
-    margin: 0;
+    margin: 2vh 0;
+}
+
+.youtube iframe {
+    width: 74vw;
+    height: 60vh;
+    margin: 4vh 0;
 }
 
 .youtube p{
     font-family: Body;
     color: #E5E5E5;
     font-size: 1.1vw;
-    padding: 0;
+    padding: 0 20vw 0 0;
     margin: 0;
 }
 
@@ -286,9 +295,9 @@ p {
     font-size: 1.2vw;
     color: #E5E5E5;
     padding: 1vw 3vw;
-    margin-top: 7vh;
     border-radius: 0.3vw;
     transition: 0.7s;
+    text-decoration: none;
 }
 
 .youtube a:hover {
@@ -374,27 +383,32 @@ p {
     transform: rotate(90deg);
 }
 
+.dropdown img.rotate-icon {
+    transform: rotate(90deg);
+}
+
 .dropdownContainer {
-    font-family: Body;
     display: none;
     flex-direction: column;
     overflow: hidden;
+    padding-left: 2vw; 
 }
 
 .dropdownContainer.show {
-    display: flex;
+    display: flex !important;
 }
 
 .dropdownContainer a {
     font-family: Body;
     color: white;
-    padding: 0.5vw 3vw;
+    padding: 0.8vh 1vw; 
     font-size: 0.8vw;
     text-decoration: none;
+    transition: background 0.3s ease;
 }
 
 .dropdownContainer a.active-link {
-    background: linear-gradient(to right,#265787, #1D1D1D);
+    background: linear-gradient(to right, #265787, #1D1D1D);
 }
 
 .mainLibrary {
@@ -485,10 +499,38 @@ p {
 
 .productDetail {
     width: 100vw;
-    padding: 10vh 13vw;
+    padding: 5vh 13vw 10vh 13vw;
     display: flex;
     display: flex;
     justify-content: space-between;
+}
+
+.back-navigation {
+    width: 100vw;
+    padding: 5vh 13vw 0 13vw; 
+    display: flex;
+    justify-content: flex-start; 
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6vw;
+    color: #A5A5A5;
+    text-decoration: none;
+    font-family: Body, sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-back:hover {
+    color: #EA7600; 
+    transform: translateX(-4px);
+}
+
+.btn-back i {
+    font-size: 0.9vw;
 }
 
 .productShowcase {
@@ -496,7 +538,6 @@ p {
     height: 50vh;
     position: relative;
 }
-
 
 .cursor {
   cursor: pointer;
@@ -584,4 +625,77 @@ p {
     height: 100% !important;
     display: block;
     outline: none;
+}
+
+
+.footer {
+    background-color: #151515;
+    width: 100vw;
+    padding: 8vh 13vw 4vh 13vw;
+    margin-top: 15vw; 
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footerContent h1 {
+    font-family: Italic;
+    color: #E5E5E5;
+    font-size: 3.5vw;
+    margin: 0 0 1.5vh 0;
+    padding: 0;
+}
+
+.footerContent p {
+    font-family: Body;
+    color: #A5A5A5;
+    font-size: 1.1vw;
+    max-width: 40vw;
+    margin: 0 auto 5vh auto;
+    line-height: 1.5;
+}
+
+.footerSocials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5vw; 
+    margin-bottom: 6vh;
+}
+
+.footerSocials a {
+    color: #E5E5E5;
+    font-size: 2vw; 
+    text-decoration: none;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4vw;
+    height: 4vw;
+    background-color: #1D1D1D;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.footerSocials a:hover {
+    color: #E5E5E5;
+    background-color: #EA7600;
+    transform: scale(1.2) translateY(-5px);
+}
+
+.footerBottom {
+    width: 100%;
+    border-top: 1px solid #2A2A2A;
+    padding-top: 3vh;
+}
+
+.footerBottom p {
+    font-family: Body;
+    color: #666666;
+    font-size: 0.8vw;
+    margin: 0;
+    padding: 0;
 }
