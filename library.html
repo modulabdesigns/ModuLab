@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenBooth</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+</head>
+
+<body>
+    <div class="navigation">
+        <div class="leftNav">
+            <a>
+                <img src="img/GenBoothLogo.png"> 
+            </a>
+        </div>
+        <div class="rightNav">
+            <a href="index.html" class="notActiveNav">Home</a>
+            <a href="library.html" class="activeNav">Library</a>
+            <a>About</a>
+        </div>
+    </div>
+
+    <div class="title">
+        <h1>Library</h1>
+    </div>
+
+    <div class="library">
+        <div class="sidenav">
+            <h2>Categories</h2>
+            <a class="dropdown" onclick="toggleDropdown(this)"><img src="img/Arrow.png">Seating Furniture</a>
+            <div class="dropdownContainer">
+                <a href="javascript:void(0)" onclick="showPage('chair', this)" class="active-link">Chair</a>
+                <a href="javascript:void(0)" onclick="showPage('accentchair')">Accent Chair</a>
+                <a href="javascript:void(0)" onclick="showPage('stool')">Stool</a>
+                <a>Sofa</a>
+                <a>Bench</a>
+                <a>Outdoor Chair</a>
+            </div>
+            <a class="dropdown" onclick="toggleDropdown(this)"><img src="img/Arrow.png">Table Furniture</a>
+            <div class="dropdownContainer">
+                <a>Booth Table</a>
+                <a>Coffee Table</a>
+                <a>Outdoor Table</a>
+            </div>
+            <a class="dropdown" onclick="toggleDropdown(this)"><img src="img/Arrow.png">Plants</a>
+            <div class="dropdownContainer">
+                <a>Floor Plants</a>
+                <a>Ceiling Plants</a>
+                <a>Wall Plants</a>
+            </div>
+            <a class="dropdown" onclick="toggleDropdown(this)"><img src="img/Arrow.png">Lamps</a>
+            <div class="dropdownContainer">
+                <a>Floor Lamp</a>
+                <a>Ceiling Lamp</a>
+                <a>Wall Lamp</a>
+            </div>
+            <a class="dropdown" onclick="toggleDropdown(this)"><img src="img/Arrow.png">Media and Retail</a>
+            <div class="dropdownContainer">
+                <a>Electricity</a>
+                <a>Fashion-related</a>
+            </div>
+        </div>
+
+        <div class="mainLibrary">
+            <div id="chair" class="contentLibrary active">
+                <a href="tiffanyChair.html" class="singleAsset">
+                    <div class="displaySingleAsset"><img src="img/TiffanyChair.jpg"></div>
+                    <h2>Tiffany Chair</h2>
+                    <p>An elegant, lightweight staple for weddings and events.</p>
+                    <div class="assetStats">
+                        <div class="rating"><img src="img/rating.png"></div>
+                        <p>100+ downloads</p>
+                    </div>
+                </a>
+                <a class="singleAsset">
+                    <div class="displaySingleAsset"><img src="img/TiffanyChair.jpg"></div>
+                    <h2>Tiffany Chair</h2>
+                    <p>An elegant, lightweight staple for weddings and events.</p>
+                    <div class="assetStats">
+                        <div class="rating"><img src="img/rating.png"></div>
+                        <p>100+ downloads</p>
+                    </div>
+                </a>
+                <a class="singleAsset">
+                    <div class="displaySingleAsset"><img src="img/TiffanyChair.jpg"></div>
+                    <h2>Tiffany Chair</h2>
+                    <p>An elegant, lightweight staple for weddings and events.</p>
+                    <div class="assetStats">
+                        <div class="rating"><img src="img/rating.png"></div>
+                        <p>100+ downloads</p>
+                    </div>
+                </a>
+                <a class="singleAsset">
+                    <div class="displaySingleAsset"><img src="img/TiffanyChair.jpg"></div>
+                    <h2>Tiffany Chair</h2>
+                    <p>An elegant, lightweight staple for weddings and events.</p>
+                    <div class="assetStats">
+                        <div class="rating"><img src="img/rating.png"></div>
+                        <p>100+ downloads</p>
+                    </div>
+                </a>
+            </div>
+
+            <div id="accentchair" class="contentLibrary">
+                <p>accentchair</p>
+            </div>
+
+            <div id="stool" class="contentLibrary">
+                <p>stool</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    function showPage(pageId, element) {
+        const sections = document.querySelectorAll('.contentLibrary');
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+        
+        const target = document.getElementById(pageId);
+        if (target) {
+            target.classList.add('active');
+        }
+
+        const allLinks = document.querySelectorAll('.dropdownContainer a');
+        allLinks.forEach(link => {
+            link.classList.remove('active-link');
+        });
+
+        if (element) {
+            element.classList.add('active-link');
+        }
+    }
+
+    function toggleDropdown(element) {
+
+        const container = element.nextElementSibling;
+        container.classList.toggle('show');
+
+        const img = element.querySelector('img');
+        img.classList.toggle('rotate-icon');
+    }
+    </script>
+</body>
+
+</html>
