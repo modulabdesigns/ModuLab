@@ -15,14 +15,13 @@
 <body>
     <div class="navigation">
         <div class="leftNav">
-            <a>
+            <a href="index.html">
                 <img src="img/GenBoothLogo.png"> 
             </a>
         </div>
         <div class="rightNav">
             <a href="index.html" class="notActiveNav">Home</a>
             <a href="library.html" class="activeNav">Library</a>
-            <a>About</a>
         </div>
     </div>
 
@@ -33,73 +32,56 @@
     <div class="library">
         <div class="sidenav">
             <h2>Categories</h2>
-            <a class="dropdown" onclick="toggleDropdown(this)"><img src="img/Arrow.png">Seating Furniture</a>
-            <div class="dropdownContainer">
+            <a class="dropdown" onclick="toggleDropdown(this)"><img src="img/Arrow.png" class="rotate-icon">Seating Furniture</a>
+            <div class="dropdownContainer show">
                 <a href="javascript:void(0)" onclick="showPage('chair', this)" class="active-link">Chair</a>
-                <a href="javascript:void(0)" onclick="showPage('accentchair')">Accent Chair</a>
-                <a href="javascript:void(0)" onclick="showPage('stool')">Stool</a>
-                <a>Sofa</a>
-                <a>Bench</a>
-                <a>Outdoor Chair</a>
+                <a href="javascript:void(0)" onclick="showPage('stool', this)">Stool</a>
             </div>
-            <a class="dropdown" onclick="toggleDropdown(this)"><img src="img/Arrow.png">Table Furniture</a>
-            <div class="dropdownContainer">
-                <a>Booth Table</a>
-                <a>Coffee Table</a>
-                <a>Outdoor Table</a>
+            <a class="dropdown" onclick="toggleDropdown(this)"><img src="img/Arrow.png" class="rotate-icon">Table Furniture</a>
+            <div class="dropdownContainer show">
+                <a href="javascript:void(0)" onclick="showPage('boothTable', this)">Booth Table</a>
+                <a href="javascript:void(0)" onclick="showPage('coffeeTable', this)">Coffee Table</a>
             </div>
-            <a class="dropdown" onclick="toggleDropdown(this)"><img src="img/Arrow.png">Plants</a>
-            <div class="dropdownContainer">
-                <a>Floor Plants</a>
-                <a>Ceiling Plants</a>
-                <a>Wall Plants</a>
-            </div>
-            <a class="dropdown" onclick="toggleDropdown(this)"><img src="img/Arrow.png">Lamps</a>
-            <div class="dropdownContainer">
-                <a>Floor Lamp</a>
-                <a>Ceiling Lamp</a>
-                <a>Wall Lamp</a>
-            </div>
-            <a class="dropdown" onclick="toggleDropdown(this)"><img src="img/Arrow.png">Media and Retail</a>
-            <div class="dropdownContainer">
-                <a>Electricity</a>
-                <a>Fashion-related</a>
+            <a class="dropdown" onclick="toggleDropdown(this)"><img src="img/Arrow.png" class="rotate-icon">Media and Retail</a>
+            <div class="dropdownContainer show">
+                <a href="javascript:void(0)" onclick="showPage('elec', this)">Electricity</a>
+                <a href="javascript:void(0)" onclick="showPage('fashion', this)">Fashion-related</a>
             </div>
         </div>
 
         <div class="mainLibrary">
             <div id="chair" class="contentLibrary active">
+                <a href="futuraChair.html" class="singleAsset">
+                    <div class="displaySingleAsset"><img src="img/Futura.png"></div>
+                    <h2>Futura Chair</h2>
+                    <p>A modern minimalist stacking chair with sleek wireframe lines.</p>
+                    <div class="assetStats">
+                        <div class="rating"><img src="img/rating.png"></div>
+                        <p>100+ downloads</p>
+                    </div>
+                </a>
+                <a href="coveredFutura.html" class="singleAsset">
+                    <div class="displaySingleAsset"><img src="img/CoveredFutura.png"></div>
+                    <h2>Covered Futura Chair</h2>
+                    <p>Features a tailored fabric drape over the classic profile.</p>
+                    <div class="assetStats">
+                        <div class="rating"><img src="img/rating.png"></div>
+                        <p>100+ downloads</p>
+                    </div>
+                </a>
+                <a href="foldableFutura.html" class="singleAsset">
+                    <div class="displaySingleAsset"><img src="img/FoldableFutura.png"></div>
+                    <h2>Foldable Futura Chair</h2>
+                    <p>A space-saving, collapsible variation for high-capacity venue.</p>
+                    <div class="assetStats">
+                        <div class="rating"><img src="img/rating.png"></div>
+                        <p>100+ downloads</p>
+                    </div>
+                </a>
                 <a href="tiffanyChair.html" class="singleAsset">
-                    <div class="displaySingleAsset"><img src="img/TiffanyChair.jpg"></div>
+                    <div class="displaySingleAsset"><img src="img/Tiffany.png"></div>
                     <h2>Tiffany Chair</h2>
-                    <p>An elegant, lightweight staple for weddings and events.</p>
-                    <div class="assetStats">
-                        <div class="rating"><img src="img/rating.png"></div>
-                        <p>100+ downloads</p>
-                    </div>
-                </a>
-                <a class="singleAsset">
-                    <div class="displaySingleAsset"><img src="img/TiffanyChair.jpg"></div>
-                    <h2>Tiffany Chair</h2>
-                    <p>An elegant, lightweight staple for weddings and events.</p>
-                    <div class="assetStats">
-                        <div class="rating"><img src="img/rating.png"></div>
-                        <p>100+ downloads</p>
-                    </div>
-                </a>
-                <a class="singleAsset">
-                    <div class="displaySingleAsset"><img src="img/TiffanyChair.jpg"></div>
-                    <h2>Tiffany Chair</h2>
-                    <p>An elegant, lightweight staple for weddings and events.</p>
-                    <div class="assetStats">
-                        <div class="rating"><img src="img/rating.png"></div>
-                        <p>100+ downloads</p>
-                    </div>
-                </a>
-                <a class="singleAsset">
-                    <div class="displaySingleAsset"><img src="img/TiffanyChair.jpg"></div>
-                    <h2>Tiffany Chair</h2>
-                    <p>An elegant, lightweight staple for weddings and events.</p>
+                    <p>An elegant, timeless classic with iconic spindle backrests.</p>
                     <div class="assetStats">
                         <div class="rating"><img src="img/rating.png"></div>
                         <p>100+ downloads</p>
@@ -107,46 +89,157 @@
                 </a>
             </div>
 
-            <div id="accentchair" class="contentLibrary">
-                <p>accentchair</p>
-            </div>
+            
 
             <div id="stool" class="contentLibrary">
-                <p>stool</p>
+                <a href="barStool.html" class="singleAsset">
+                    <div class="displaySingleAsset"><img src="img/Bar Stool.png"></div>
+                    <h2>Bar Stool</h2>
+                    <p>An elevated, industrial-chic seating option for reception counters.</p>
+                    <div class="assetStats">
+                        <div class="rating"><img src="img/rating.png"></div>
+                        <p>100+ downloads</p>
+                    </div>
+                </a>
+            </div>
+
+            <div id="boothTable" class="contentLibrary">
+                <a href="ibm.html" class="singleAsset">
+                    <div class="displaySingleAsset"><img src="img/ibm.png"></div>
+                    <h2>IBM Table</h2>
+                    <p>A rectangular, standard-height table for training, registration, or display.</p>
+                    <div class="assetStats">
+                        <div class="rating"><img src="img/rating.png"></div>
+                        <p>100+ downloads</p>
+                    </div>
+                </a>
+
+                <a href="r8.html" class="singleAsset">
+                    <div class="displaySingleAsset"><img src="img/r8.png"></div>
+                    <h2>R8 Table</h2>
+                    <p>Built on a modular shell scheme framing for tradeshow booth setups.</p>
+                    <div class="assetStats">
+                        <div class="rating"><img src="img/rating.png"></div>
+                        <p>100+ downloads</p>
+                    </div>
+                </a>
+            </div>
+            <div id="coffeeTable" class="contentLibrary">
+                <a href="squareCoffee.html" class="singleAsset">
+                    <div class="displaySingleAsset"><img src="img/squareCoffee.png"></div>
+                    <h2>Square Coffee Table</h2>
+                    <p>A low-profile centerpiece table for casual meeting lounges.</p>
+                    <div class="assetStats">
+                        <div class="rating"><img src="img/rating.png"></div>
+                        <p>100+ downloads</p>
+                    </div>
+                </a>
+
+                <a href="roundCoffee.html" class="singleAsset">
+                    <div class="displaySingleAsset"><img src="img/roundCoffee.png"></div>
+                    <h2>Round Coffee Table</h2>
+                    <p>A compact, circular accent table designed for fluid conversation zones.</p>
+                    <div class="assetStats">
+                        <div class="rating"><img src="img/rating.png"></div>
+                        <p>100+ downloads</p>
+                    </div>
+                </a>
+            </div>
+
+            <div id="elec" class="contentLibrary">
+                <a href="tvStand.html" class="singleAsset">
+                    <div class="displaySingleAsset"><img src="img/tvStand.png"></div>
+                    <h2>TV Stand</h2>
+                    <p>A sleek display mount optimized for digital portfolios and presentation.</p>
+                    <div class="assetStats">
+                        <div class="rating"><img src="img/rating.png"></div>
+                        <p>100+ downloads</p>
+                    </div>
+                </a>
+            </div>
+            <div id="fashion" class="contentLibrary">
+                <a href="clothingRack.html" class="singleAsset">
+                    <div class="displaySingleAsset"><img src="img/clothingRack.png"></div>
+                    <h2>Clothing Rack</h2>
+                    <p>An industrial garment rail perfect for apparel and retail pop-ups.</p>
+                    <div class="assetStats">
+                        <div class="rating"><img src="img/rating.png"></div>
+                        <p>100+ downloads</p>
+                    </div>
+                </a>
+
+                <a href="standingMirror.html" class="singleAsset">
+                    <div class="displaySingleAsset"><img src="img/standingMirror.png"></div>
+                    <h2>Standing Mirror</h2>
+                    <p>A full-length minimalist mirror for apparel fitting.</p>
+                    <div class="assetStats">
+                        <div class="rating"><img src="img/rating.png"></div>
+                        <p>100+ downloads</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+        <div class="footer">
+    <div class="footerContent">
+        <h1>Let's work Together!</h1>
+        <p>Have a project in mind or want to integrate our asset add-ons? Get in touch.</p>
+        
+        <div class="footerSocials">
+    <a href="https://wa.me/087778920831" target="_blank" title="WhatsApp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+    <a href="https://instagram.com/modulab.design" target="_blank" title="Instagram">
+        <i class="fa fa-instagram"></i>
+    </a>
+    <a href="https://youtube.com/@modulab.design?si=_prUxhJvZliUzjw3" target="_blank" title="YouTube">
+        <i class="fa fa-youtube-play"></i>
+    </a>
+    <a href="https://github.com/modulabdesigns/ModuLab" target="_blank" title="GitHub">
+        <i class="fa fa-github"></i>
+    </a>
+    <a href="https://linktr.ee/modulab.designs" target="_blank" title="Linktree">
+        <i class="fa fa-external-link"></i>
+    </a>
+    <a href="mailto:modulab.designs@gmail.com" title="Email Us">
+        <i class="fa fa-envelope"></i>
+    </a>
+</div>
+    </div>
     
+    <div class="footerBottom">
+        <p> 2026 GenBooth. All Rights Reserved.</p>
+    </div>
+</div>
     <script>
     function showPage(pageId, element) {
-        const sections = document.querySelectorAll('.contentLibrary');
-        sections.forEach(section => {
-            section.classList.remove('active');
-        });
-        
-        const target = document.getElementById(pageId);
-        if (target) {
-            target.classList.add('active');
-        }
-
-        const allLinks = document.querySelectorAll('.dropdownContainer a');
-        allLinks.forEach(link => {
-            link.classList.remove('active-link');
-        });
-
-        if (element) {
-            element.classList.add('active-link');
-        }
+    const sections = document.querySelectorAll('.contentLibrary');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
+    
+    const target = document.getElementById(pageId);
+    if (target) {
+        target.classList.add('active');
     }
 
-    function toggleDropdown(element) {
+    const allLinks = document.querySelectorAll('.dropdownContainer a');
+    allLinks.forEach(link => {
+        link.classList.remove('active-link');
+    });
 
-        const container = element.nextElementSibling;
-        container.classList.toggle('show');
-
-        const img = element.querySelector('img');
-        img.classList.toggle('rotate-icon');
+    if (element) {
+        element.classList.add('active-link');
     }
+}
+
+function toggleDropdown(element) {
+    const container = element.nextElementSibling;
+    container.classList.toggle('show');
+
+    const img = element.querySelector('img');
+    img.classList.toggle('rotate-icon');
+}
     </script>
 </body>
 
